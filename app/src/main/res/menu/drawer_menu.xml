@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_black_24"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_meal_plans"
+            android:icon="@drawable/meal_plans24"
+            android:title="@string/menu_meal_plans" />
+        <item
+            android:id="@+id/nav_shopping_list"
+            android:icon="@drawable/shopping24"
+            android:title="@string/menu_shopping" />
+        <item
+            android:id="@+id/nav_meassages"
+            android:icon="@drawable/baseline_message_black_24"
+            android:title="@string/menu_messages" />
+        <item
+            android:id="@+id/nav_counselling"
+            android:icon="@drawable/nav_counselling24"
+            android:title="@string/menu_counselling" />
+        <!--<item
+            android:id="@+id/nav_ml_record"
+            android:icon="@drawable/meal_plan"
+            android:title="@string/menu_ml_record" />-->
+        <!--<item
+            android:id="@+id/nav_dt_stats"
+            android:icon="@drawable/diet_stats"
+            android:title="@string/menu_dt_stats" />-->
+        <!--<item
+            android:id="@+id/nav_messages"
+            android:icon="@drawable/baseline_message_black_24"
+            android:title="@string/menu_messages" />-->
+        <item
+            android:id="@+id/nav_update_details"
+            android:icon="@drawable/scale24"
+            android:title="@string/menu_update_details"/>
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/baseline_settings_black_24"
+            android:title="@string/menu_settings"/>
+    </group>
+
+    <item android:title="@string/menu_invite_sec_title">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share"/>
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@mipmap/feedback"
+                android:title="@string/menu_feedback" />
+        </menu>
+    </item>
+
+    <!--    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/ic_menu_share"
+        android:title="@string/menu_share" />
+    <item
+        android:id="@+id/nav_send"
+        android:icon="@drawable/ic_menu_send"
+        android:title="@string/menu_send" />-->
+
+</menu>

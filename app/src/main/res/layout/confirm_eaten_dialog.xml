@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginTop="100dp"
+    android:layout_marginBottom="100dp"
+    app:contentPaddingRight="30dp"
+    app:contentPaddingLeft="30dp"
+    app:contentPaddingTop="30dp"
+    app:contentPaddingBottom="30dp"
+    app:cardElevation="20dp"
+    app:cardBackgroundColor="@color/colorSecondaryLight">
+
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/feedBAck_prog"
+        style="@style/SpinKitView.Circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/black"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/input_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="21sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:text="@string/confirm_eaten_msg" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp">
+            <Button
+                android:id="@+id/no_confirm_eaten_btn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:layout_marginEnd="30dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:background="@drawable/user_info_sabe_btn"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="@string/decline_confirm_eaten"/>
+            <Button
+                android:id="@+id/yes_confirm_eaten_btn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:background="@drawable/button_standard"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="@string/accept_confirm_eaten"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

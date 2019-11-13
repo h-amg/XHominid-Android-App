@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recomnd_item_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="0dp"
+    app:cardPreventCornerOverlap="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/listPreferredItemHeight"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="65dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/consultant_picc_upcoming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/coach_photo"
+                android:paddingTop="@dimen/nav_header_vertical_spacing" />
+        </FrameLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/main_container"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/consultantName_upcoming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:text="Reeman Gibreel" />
+            <TextView
+                android:id="@+id/consultantType_upcoming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:text="(Nutritionist)" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center_vertical">
+
+
+            <LinearLayout
+                android:id="@+id/upcominSess_dateAproval_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/approval_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/acceptGreen"
+                    android:textSize="16sp"
+                    tools:text="@string/approved"/>
+                <TextView
+                    android:id="@+id/date_time_sess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:text="Sat 12.8.2019 18:25" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/schedule_upcoming_ses"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:text="@string/sesched_sess"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:background="@drawable/button_standard"
+                android:hapticFeedbackEnabled="true"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/upcoming_sess_beingScheduled"
+                style="@style/SpinKitView.ThreeBounce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/black"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

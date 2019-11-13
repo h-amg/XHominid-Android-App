@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShoppingListActivity"
+    android:background="#000">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/shopping_list_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/colorPrimaryDark"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+    <LinearLayout
+        android:id="@+id/shopping_lsit_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@color/colorSecondaryDark">
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="5"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/period_selected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                    android:layout_gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    tools:text="Sat, 12.5 - Sat, 12.5" />
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/shopping_llist_pk_period_btn"
+                    android:layout_width="145dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:gravity="center"
+                    android:text="@string/pick_period_Next_wk"
+                    android:textSize="14sp"
+                    android:background="@drawable/edit_text_custom"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:layout_width="match_parent">
+
+            <ListView
+                android:id="@+id/shopping_list"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/list_item_shopping"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:elevation="0dp"/>
+
+            <ProgressBar
+                android:id="@+id/shopping_list_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:visibility="visible"
+                tools:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/shopping_list_empty_state_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:text="@string/empty_shopping_list"
+                tools:text="No shopping list available at the moment"
+                android:visibility="gone"
+                tools:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

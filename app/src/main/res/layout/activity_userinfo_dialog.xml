@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:layout_gravity="center_vertical"
+    android:background="@color/colorSecondary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:text="@string/about_you"
+            tools:text="About You"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:text="@string/gender"
+            tools:text="Gender"/>
+
+        <Spinner
+            android:id="@+id/gender"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15sp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:background="@drawable/edit_text_custom">
+        </Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:text="@string/age"
+            tools:text="Age"/>
+
+        <Spinner
+            android:id="@+id/age_input"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15sp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:background="@drawable/edit_text_custom">
+        </Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:text="@string/weight"
+            tools:text="Weight"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/weight_input"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15sp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:singleLine="true"
+                android:inputType="number"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:background="@drawable/edit_text_custom" />
+
+            <Spinner
+                android:id="@+id/weight_unit"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15sp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:background="@drawable/edit_text_custom">
+            </Spinner>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:text="@string/height"
+            tools:text="Height"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/heightCm_input"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15sp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:singleLine="true"
+                android:inputType="number"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:background="@drawable/edit_text_custom" />
+
+            <EditText
+                android:id="@+id/heightFt_input"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15sp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:inputType="number"
+                android:background="@drawable/edit_text_custom" />
+
+            <EditText
+                android:id="@+id/heightIn_input"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15sp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:inputType="number"
+                android:background="@drawable/edit_text_custom" />
+
+            <Spinner
+                android:id="@+id/height_unit"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15sp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:background="@drawable/edit_text_custom">
+            </Spinner>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:text="@string/goal"
+            tools:text="Goal"/>
+
+        <Spinner
+            android:id="@+id/goal"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15sp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:background="@drawable/edit_text_custom">
+        </Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:text="@string/activity"
+            tools:text="Activity"/>
+
+        <Spinner
+            android:id="@+id/activity"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:background="@drawable/edit_text_custom">
+        </Spinner>
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:background="@drawable/user_info_sabe_btn"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:text="@string/save"/>
+
+    </LinearLayout>
+
+</ScrollView>

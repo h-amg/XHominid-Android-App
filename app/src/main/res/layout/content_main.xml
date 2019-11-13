@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity"
+    android:id="@+id/content_main">
+
+    <!--
+    dummy view to shift focus from editText view
+     and avoid keyboard showing up on startup
+     -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:orientation="horizontal"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:elevation="5dp"
+        android:background="@color/colorPrimaryDark"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <!--<com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Wave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/header"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/activium_green"
+        android:visibility="gone" />-->
+
+    <!--<LinearLayout
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/header"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="50dp"
+        android:scrollbars="vertical">
+
+        <TextView
+            android:id="@+id/amani_text"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="5dp"
+            android:maxWidth="300dp"
+            android:maxHeight="90dp"
+            android:textColor="#fff"
+            android:textSize="21sp"
+            android:ellipsize="end"
+            android:scrollbars="vertical"
+            android:visibility="visible"
+            tools:text="@string/amani_init"/>
+
+        <ImageButton
+            android:id="@+id/scroll_indic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight"
+            android:alpha="0.4"
+            android:src="@drawable/baseline_keyboard_arrow_down_black_18"
+            android:visibility="gone"/>
+
+        &lt;!&ndash;<androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.5"
+            android:background="@color/colorPrimaryLight">
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/baseline_keyboard_arrow_down_black_48" />
+
+        </androidx.cardview.widget.CardView>&ndash;&gt;
+
+    </LinearLayout>-->
+
+    <!--<LinearLayout
+        android:id="@+id/input_labels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="135dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:text="@string/food"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:text="@string/quantity"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:text="@string/measure"/>
+
+    </LinearLayout>-->
+
+    <!--<LinearLayout
+        android:id="@+id/input_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="160dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/text_input"
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="38dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:singleLine="true"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textColor="#000"
+            android:background="@drawable/custom_gray_input" />
+
+        <EditText
+            android:id="@+id/qty_input"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="38dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:singleLine="true"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:background="@drawable/custom_gray_input" />
+
+        <Spinner
+            android:id="@+id/measure"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="38dp"
+            android:layout_marginStart="10dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:spinnerMode="dropdown"
+            android:dropDownVerticalOffset="38dp"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:background="@drawable/custom_spinner"/>
+
+    </LinearLayout>-->
+
+    <!--<LinearLayout
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="210dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        &lt;!&ndash;<EditText
+            android:id="@+id/text_input"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="38dp"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:background="@drawable/edit_text_custom" />&ndash;&gt;
+
+        &lt;!&ndash;<androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="38dp"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:background="@drawable/edit_text_custom"/>&ndash;&gt;
+
+        <Spinner
+            android:id="@+id/action_selector"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="38dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:spinnerMode="dropdown"
+            android:dropDownVerticalOffset="-38dp"
+            android:textAlignment="center"
+            android:background="@drawable/custom_spinner"/>
+
+        &lt;!&ndash;<ImageButton
+            android:id="@+id/talk"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/speak32"
+            android:background="@drawable/button_standard"
+            android:hapticFeedbackEnabled="true" />&ndash;&gt;
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="38dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:text="Send"
+            android:drawableEnd="@drawable/baseline_send_black_24"
+            android:background="@drawable/edit_text_custom"
+            android:hapticFeedbackEnabled="true" />
+
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/macros_sec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            android:text="@string/total_calories"/>
+
+
+        <ProgressBar
+            android:id="@+id/total_prog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            tools:progress="45"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:progressBackgroundTint="@color/colorSecondaryLight"
+            android:progressTint="@color/colorPrimaryLight"/>
+
+        <include
+            layout="@layout/macros_dash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            app:contentPaddingLeft="8dp"
+            app:contentPaddingRight="8dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp"
+            app:cardPreventCornerOverlap="false"
+            app:contentPaddingTop="10dp"
+            app:contentPaddingBottom="10dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="8"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:text="@string/personal_meals"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/colorPrimary"/>
+                
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.github.ybq.android.spinkit.SpinKitView
+                        android:id="@+id/meal_loading_progr"
+                        style="@style/SpinKitView.ThreeBounce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        app:SpinKit_Color="@color/colorPrimaryLight"
+                        android:visibility="visible" />
+
+                    <com.github.ybq.android.spinkit.SpinKitView
+                        android:id="@+id/analyzing_progress"
+                        style="@style/SpinKitView.CubeGrid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="70dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        app:SpinKit_Color="@color/colorPrimaryLight"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/preparingText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/analyzing_progress"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="@string/preparing_meal_plan"
+                        tools:text="ANALYZING SUBMITTED CRAVINGS..."
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/emptyMeals"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:text="@string/no_meal_plan_no_sess_sched"
+                        tools:text="No meals planned yet"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/upcoming_sess_no_meals"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:text="@string/upcom_sess_no_meal"
+                        tools:text="find your upcoming session here"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+                        <ExpandableListView
+                            android:id="@+id/expandable_recomnds_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:divider="@null"
+                            android:dividerHeight="8dp"
+                            android:elevation="5dp"
+                            tools:listitem="@layout/list_item_recomnd"
+                            android:visibility="visible"
+                            tools:visibility="visible"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/scheduleSess_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_below="@id/emptyMeals"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/user_info_sabe_btn"
+                        android:text="@string/schedule_session"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:hapticFeedbackEnabled="true"
+                        android:visibility="gone"
+                        tools:visibility="gone"/>
+
+                    <Button
+                        android:id="@+id/go_to_sess_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_below="@id/upcoming_sess_no_meals"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/user_info_sabe_btn"
+                        android:text="@string/check_sess"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:hapticFeedbackEnabled="true"
+                        android:visibility="gone"
+                        tools:visibility="gone"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

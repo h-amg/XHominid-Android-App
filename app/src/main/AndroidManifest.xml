@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.main.android.activium">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/new_logo64x64_trans"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/new_logo64x64_trans"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MealPlansActivity"
+            android:label="@string/title_activity_ml_plans"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ShoppingListActivity"
+            android:label="@string/title_activity_ml_records"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".MessagesActivity"
+            android:label="@string/title_activity_messages"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ConsultationActivity"
+            android:label="@string/title_activity_consultation_sess"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".MealsRecordActivity"
+            android:label="@string/title_activity_ml_records"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".dialogs.RateEnergyDialog"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".DietStatsActivity"
+            android:label="@string/title_activity_dt_stats"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Dark">
+        </activity>
+        <activity
+            android:name=".SubscriptionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Dark">
+        </activity> <!-- facebook -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity> <!-- facebook -->
+        <activity
+            android:name=".SignupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Dark">
+        </activity>
+        <activity
+            android:name=".EmailConfirmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Dark">
+            <intent-filter android:label="@string/confirm_email">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="www.activium.app"
+                    android:pathPrefix="/email_confirmation"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ResetPassActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Dark">
+        </activity>
+        <activity
+            android:name=".NewPassActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Dark">
+            <intent-filter android:label="@string/reset_password">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="www.activium.app"
+                    android:pathPrefix="/reset_password"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".IntroActivity"
+            android:label="@string/app_intro">
+        </activity>
+        <activity
+            android:name=".VideoActivity"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name=".VideoSettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".VideoActivity"
+            android:theme="@style/AppTheme.Settings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.main.android.activium.VideoActivity" />
+        </activity>
+        <service
+            android:name=".util.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/new_logo_notif_24_trans" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/black" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+    </application>
+
+</manifest>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/baseline_keyboard_arrow_up_black_36" android:state_selected="true" />
+    <item android:drawable="@drawable/baseline_keyboard_arrow_up_black_36" android:state_empty="true" />
+    <item android:drawable="@drawable/baseline_keyboard_arrow_down_black_36" android:state_selected="false" />
+</selector>

@@ -1,0 +1,300 @@
+<resources>
+    <string name="app_name">XHominid</string>
+
+    // services values
+    <!--MonogDb-Stitch-->
+
+    <!--Google play billing products ID-->
+
+
+    <!--Subscribe activity-->
+    <string name="sub">START TRIAL</string>
+    <string name="sub_msg">Get your diet designed and managed by an expert nutritionist with a <b>7 DAYS free trial </b> to enjoy personalized meals plan and diet tracking.</string>
+    <string name="sub_per_month">/MONTH</string>
+    <string name="not_supported">We are sorry :/ Billing is not supported for this device.</string>
+
+    <!--app sharing-->
+    <string name="chooser_title">Share with</string>
+
+    <!--login layout strings-->
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!--email confirmation-->
+    <string name="confirm_email">Confirm email</string>
+    <string name="confirm_email_msg">Thanks for signing up! Please click the confirmation
+        link sent to your email address to continue.</string>
+    <string name="resend_email">Resend confirmation email</string>
+
+
+    <!--Password reset email-->
+    <string name="pass_reset_msg">Password reset email sent. please check your inbox and
+        click on the link to reset your password.</string>
+
+    <!--Reset password-->
+    <string name="reset_password">Reset password.</string>
+
+
+    <!--Drawer header-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">User Name</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <!--Drawer menu buttons title-->
+    <string name="menu_home">Home</string>
+    <string name="menu_meal_plans">Meal Plans</string>
+    <string name="menu_shopping">Shopping List</string>
+    <string name="menu_ml_record">Meals Record</string>
+    <string name="menu_dt_stats">Diet Stats</string>
+    <string name="menu_counselling">Counselling Sessions</string>
+    <string name="menu_messages">Messages</string>
+    <string name="menu_update_details">Update Details</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="menu_feedback">Feedback</string>
+    <string name="menu_invite_sec_title">Invite your friends</string>
+
+    <!--Activities title-->
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_shopping_List">Home</string>
+    <string name="title_activity_ml_plans">Meal Plans</string>
+    <string name="title_activity_ml_records">Shopping List</string>
+    <string name="title_activity_messages">Messages</string>
+    <string name="title_activity_consultation_sess">Consultation sessions</string>
+    <string name="title_activity_dt_stats">Diet Stats</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_chat">Messages</string>
+
+
+    <!-- Settings Preferences -->
+    <string name="notifications_header">Notifications</string>
+    <string name="audio_header">Audio</string>
+    <string name="name_title">Your name</string>
+    <string name="reply_title">Default reply action</string>
+    <string name="log_reminder_title">Receive reminders to log your macros</string>
+    <string name="reminder_ferq">Receive notifications every:</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="hours">Hours</string>
+    <string name="macros_status">Receive diet status update notifications</string>
+    <string name="audable_response">Enable audablie reponse</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="logout_header">Logout</string>
+    <string name="logout_btn">LOGOUT</string>
+    <string name="click_to_logout">You can logout of the app from here</string>
+
+
+    <!--Main activity Content-->
+    <string name="total_calories">Total Calories</string>
+    <string name="quantity">Quantity</string>
+    <string name="food">Food</string>
+    <string name="measure">Measure</string>
+    <string name="send">Send</string>
+    <string name="personal_meals">Today\'s meals</string>
+    <string name="preparing_meal_plan">Preparing meal plan...</string>
+    <string name="no_meal_plan_no_sess_sched">Schedule a consultation session to get your personalized meal plan</string>
+    <string name="amani_init">HI there! checking your meals...</string>
+    <string name="amani_meals_aval">Your meals for this week are ready</string>
+    <string name="amani_meals_none">Hey....! you haven\'t recorded your weekly cravings yet. press the record button below to start</string>
+    <string name="amani_meals_prep">Your meal plan is being prepared. I\'ll notify you when it\'s ready</string>
+    <string name="schedule_session">Schedule consultation session</string>
+    <string name="check_sess">GO TO SESSIONS</string>
+    <string name="upcom_sess_no_meal">Find your meal plan here after your upcoming session</string>
+    <string name="breakfast">BREAKFAST</string>
+    <string name="lunch">LUNCH</string>
+    <string name="dinner">DINNER</string>
+    <string name="snacks">SNACKS</string>
+
+    <!--Meals Record activity-->
+    <string name="no_meals">No loggedMeals found</string>
+    <string name="no_internet">No internet connection found!</string>
+
+
+    <!--Facebook-->
+    <string name="facebook_app_id">app_id</string>
+    <string name="fb_login_protocol_scheme">login_code</string>
+
+    <!--User info dialog-->
+    <string name="about_you">About You</string>
+    <string name="feedback_headline">Tell us what you\'re thinking. We would love to hear from you, share your thoughts with us and we will reach out to you in less than 2 hours.</string>
+    <string name="age">Age</string>
+    <string name="gender">Gender</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="goal">Goal</string>
+    <string name="activity">Activity Level</string>
+    <string name="save">SAVE</string>
+
+    <!--Update weight goals dialog-->
+    <string name="update_weight_goal_title">Update your weight and goal</string>
+    <string name="update">UPDATE</string>
+
+    <!--Confirm eaten Dialog-->
+    <string name="confirm_eaten_msg">Are you sure you want to mark this as eaten?</string>
+    <string name="decline_confirm_eaten">NO</string>
+    <string name="accept_confirm_eaten">YES</string>
+
+    <!--Rate energy notification-->
+    <string name="energy_notif_title">Rate your energy level at the moment</string>
+    <string name="tell_us_now">Update us</string>
+    <string name="low">LOW</string>
+    <string name="high">HIGH</string>
+
+    <!--Rate hunger notification-->
+    <string name="hunger_notif_title">Rate your hunger level at the moment</string>
+    <string name="full">Full</string>
+    <string name="hungry">HUNGRY</string>
+
+    <!--Shopping list activity-->
+    <string name="item">Item</string>
+    <string name="pick_period_this_wk">This week</string>
+    <string name="pick_period_Next_wk">Next week</string>
+    <string name="empty_shopping_list">No shopping items available now</string>
+
+
+    <!--Meal plans activity-->
+    <string name="empty_meal_plans">No meals found</string>
+
+
+    // Meal recipe Dialog
+    <string name="recipe_toolbar_title">Recipe</string>
+    <string name="ingredients">INGREDIENTS</string>
+    <string name="instructions">Instructions:</string>
+    <string name="eating_now">EATING THIS NOW!</string>
+    <string name="start_prep">START MAKING IT</string>
+    <string name="next_step">NEXT</string>
+    <string name="having_later">PREP FOR LATER</string>
+    <string name="instructions_placeholder">1 tbsp olive oil
+    300g pack ready-made mini meatballs
+    2 x 400g cans chopped tomatoes
+    300ml milk
+    1 tbsp dried oregano
+    200g pasta shapes
+    8 thin wholemeal baguette slices
+    50g cheddar, grated
+    small bunch basil, torn
+    300g pack ready-made mini meatballs
+    2 x 400g cans chopped tomatoes
+    300ml milk
+    1 tbsp dried oregano
+    200g pasta shapes
+    8 thin wholemeal baguette slices
+    50g cheddar, grated
+    small bunch basil, torn</string>
+    <string name="ingredients_placeholder">1 tbsp olive oil
+    300g pack ready-made mini meatballs
+    2 x 400g cans chopped tomatoes
+    300ml milk
+    1 tbsp dried oregano
+    200g pasta shapes
+    8 thin wholemeal baguette slices
+    50g cheddar, grated
+    small bunch basil, torn, 00g pack ready-made mini meatballs
+    2 x 400g cans chopped tomatoes
+    300ml milk
+    1 tbsp dried oregano
+    200g pasta shapes
+    8 thin wholemeal baguette slices
+    50g cheddar, grated
+    small bunch basil, torn00g pack ready-made mini meatballs
+    2 x 400g cans chopped tomatoes
+    300ml milk
+    1 tbsp dried oregano
+    200g pasta shapes
+    8 thin wholemeal baguette slices
+    50g cheddar, grated
+    small bunch basil, torn, 00g pack ready-made mini meatballs
+    2 x 400g cans chopped tomatoes
+    300ml milk
+    1 tbsp dried oregano
+    200g pasta shapes
+    8 thin wholemeal baguette slices
+    50g cheddar, grated
+    small bunch basil, torn00g pack ready-made mini meatballs
+    2 x 400g cans chopped tomatoes
+    300ml milk
+    1 tbsp dried oregano
+    200g pasta shapes
+    8 thin wholemeal baguette slices
+    50g cheddar, grated
+    small bunch basil, torn, 00g pack ready-made mini meatballs
+    2 x 400g cans chopped tomatoes
+    300ml milk
+    1 tbsp dried oregano
+    200g pasta shapes
+    8 thin wholemeal baguette slices
+    50g cheddar, grated
+    small bunch basil, torn</string>
+
+    // firebase cloud messaging
+    <string name="default_notification_channel_id">007</string>
+    <string name="master_notif_key">notification_key</string>
+
+    // Intro activity
+    <string name="app_intro">Intro</string>
+    <string name="todays_meals_title">Today\'s Meals</string>
+    <string name="meal_plans_title">Meal Plans</string>
+    <string name="shopping_list_title">Shopping List</string>
+    <string name="consultation_sessions_title">Consultation Sessions</string>
+    <string name="feedback_intro_title">Your Thoughts Matter</string>
+    <string name="nav_bar_title">Navigation bar</string>
+    <string name="todays_meals_descrip">Meals planned for the day are located here, clicking on a meal will view its cooking instruction. A meal can be marked as eaten and logged to your record or as prepped for later if you\'re preparing your meals in advance</string>
+    <string name="shopping_list_descrip">Your shopping list with only the shopping items you need for your meal plan.</string>
+    <string name="meal_plans_descrip">You can browse your previous and future meal plans from here.</string>
+    <string name="consultation_sessions_descrip">Schedule your consultation sessions and enter them from here when its time to meet your nutritionists.</string>
+    <string name="feedback_intro_descrip">Your feedback is extremely valuable to us, feel free to write to us anytime and we will be in touch shortly</string>
+    <string name="nav_bar_descrip">You can navigate through the app using the navigation drawer on the left side</string>
+
+    <!--Twilio video-->
+    <string name="room_status">status</string>
+    <string name="error_retrieving_access_token">Error retrieving token</string>
+    <string name="log_out">Log Out</string>
+    <string name="permissions_needed">Camera and Microphone permissions needed. Please allow in App Settings for additional functionality.</string>
+    <string name="settings">Settings</string>
+    <string name="connected">"You're connected"</string>
+    <string name="reconnecting">"Reconnecting..."</string>
+
+    <!-- Twilio Video Settings -->
+    <string name="codec_title">Set your preferred audio and video codec. Not all codecs are supported with Group rooms. The media server will fallback to OPUS or VP8 if a preferred codec is not supported.</string>
+    <string name="pref_title_audio_codec">Audio Codec</string>
+    <string name="pref_title_video_codec">Video Codec</string>
+    <string name="sender_bandwidth_constraints">Set sender bandwidth constraints. Zero represents the WebRTC default value which varies by codec.</string>
+    <string name="max_audio_bitrate">Max Audio Bitrate (bits per second)</string>
+    <string name="max_video_bitrate">Max Video Bitrate (bits per second)</string>
+    <string name="turn_speaker_on">Speaker ON</string>
+    <string name="vp8_simulcast">VP8 Simulcast</string>
+
+    <!--Consultations Activity-->
+    <string name="today_sess">Today\'s sessions</string>
+    <string name="upcoming_sess">Upcoming sessions</string>
+    <string name="no_upcoming_sess">No upcoming sessions</string>
+    <string name="no_todays_sess">No sessions today</string>
+    <string name="coach_photo">Coach photo</string>
+    <string name="enter_sess">ENTER</string>
+    <string name="starting_in">String in</string>
+    <string name="starting_at">String at</string>
+    <string name="sesched_sess">SCHEDULE</string>
+    <string name="nutritionist">Nutritionist</string>
+    <string name="minutes_abbreviated"> m</string>
+    <string name="approved">Approved</string>
+    <string name="pending">Pending approval</string>
+
+    <!--Step view-->
+    <string name="next_step_btn">NEXT STEP</string>
+
+    <!--Messages Activity-->
+    <string name="messages_edit_tct_hint">Type a message</string>
+    <string name="messages__options_reply">Reply</string>
+    <string name="messages__options_star">Starred Message</string>
+    <string name="messages__options_info">Info</string>
+    <string name="messages__options_delete">Delete</string>
+    <string name="messages__options_copy">Copy Message</string>
+    <string name="messages__options_forward">Forward</string>
+    <string name="messages_layout_title">Messages</string>
+
+</resources>

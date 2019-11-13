@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="?attr/spinnerDropDownItemStyle"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/text1"
+    android:singleLine="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:ellipsize="marquee"
+    android:textColor="#000"
+    android:textSize="16sp"
+    android:textAlignment="center"
+    android:gravity="center"
+    tools:text="CHECK DIET COMPATIBILITY" />
+
