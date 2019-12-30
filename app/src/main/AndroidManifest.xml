@@ -122,7 +122,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ResetPassActivity"
+            android:name=".reqPassResetActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Dark">
         </activity>

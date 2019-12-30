@@ -155,7 +155,7 @@ public class LoginActivity extends AppCompatActivity implements SignupActivity.s
             @Override
             public void onClick(View v) {
                 // Go to reset pass activity
-                Intent intent = new Intent(getApplicationContext(), ResetPassActivity.class);
+                Intent intent = new Intent(getApplicationContext(), reqPassResetActivity.class);
                 startActivityForResult(intent, REQUEST_SIGNUP);
                 finish();
                 overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);

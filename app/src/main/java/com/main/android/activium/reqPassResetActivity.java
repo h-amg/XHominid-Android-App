@@ -27,8 +27,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class ResetPassActivity extends AppCompatActivity {
-    private static final String TAG = "ResetPassActivity";
+public class reqPassResetActivity extends AppCompatActivity {
+    private static final String TAG = "reqPassResetActivity";
 
 
     @BindView(R2.id.input_email_reset)
@@ -66,7 +66,7 @@ public class ResetPassActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                hideSoftKeyboard(ResetPassActivity.this);
+                hideSoftKeyboard(reqPassResetActivity.this);
 
                 String email = _emailText.getText().toString();
                 SharedPreferences sharedPreferences = getSharedPreferences("pseudoCache", MODE_PRIVATE);
@@ -107,7 +107,7 @@ public class ResetPassActivity extends AppCompatActivity {
                         }else{
                             Log.e("stitch", "Error sending password reset email:",
                                     task.getException());
-                            Toast.makeText(ResetPassActivity.this,
+                            Toast.makeText(reqPassResetActivity.this,
                                     task.getException().getMessage(),
                                     Toast.LENGTH_LONG).show();
                             UserPasswordAuthProviderClient emailPassClient = client.getAuth().getProviderClient(UserPasswordAuthProviderClient.factory);

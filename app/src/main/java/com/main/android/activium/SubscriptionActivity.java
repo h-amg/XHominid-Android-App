@@ -218,7 +218,7 @@ public class SubscriptionActivity extends AppCompatActivity {
     private void queryProdDetails(){
         /*Log.d("Sub", "querryDetails triggered");*/
         List<String> skuList = new ArrayList<>(); // sku is if your productId
-        skuList.add(getResources().getString(R.string.basicSubscription));
+        skuList.add("fgdgdfg");
         SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
         params.setSkusList(skuList).setType(BillingClient.SkuType.SUBS);
         billingClient.querySkuDetailsAsync(params.build(),
