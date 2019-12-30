@@ -14,48 +14,101 @@ XHomind is a platform that helps people looking for nutrition coaching and meal 
 ## Components
 
 ### [Main Activity](app/src/main/java/com/main/android/activium/MainActivity.java)
+ - Fetches the user's current maco nutrients intake status from DB.
+ - Displays the remian allowed calories for the day.
+ - Check if there are available planned meals for the day and displays them.
+ - Allows the user to view planned meals recipes and cooking instructions .
+ - Enables the user to mark meals as eaten to be logged and substracted from remaining calories.
+ - Notifies the user when they have no planned meals available for the week.
+ - Enables the user to book a consultations session with their nutritionsist when no meals are planned.
+ - Requests information used to design user diet plan on intial launch of the app after sign up up
+ - Verifies user subscription when the app is launched.
+ - Verifies that the user is authenticated when the app is launched.
 
 ### [Meal Plans Activity](app/src/main/java/com/main/android/activium/MealPlansActivity.java)
+- Allows the user to browse the passed days logged meals.
+- Allows the user to browse the planned meals for upcoming days.
 
 ### [Shopping list Activity](app/src/main/java/com/main/android/activium/ShoppingListActivity.java)
+- Allows the user to browe their weekly shopping list which is specified by their nutritionist each week.
 
 ### [Messages Activity](app/src/main/java/com/main/android/activium/MessagesActivity.java)
+- Allows the user to message their nutritionists directly with their inquiries.
 
 ### [Consultation sessions Activity](app/src/main/java/com/main/android/activium/ConsultationActivity.java)
+- Allows the user to view upcoming consultation sessions.
+- Allows the user to sechedule next week's consulations sessions.
+- Allow the user to view the status of whether their secheduled session is approved by the nutritionists.
+- Allows the user to view declined sessions by the nutritionists.
+- Allows the user to re-sechedule declined consultation sessions.
+- Allows the user to enter consultations sessions and join the video call.
 
 ### [Settings Activity](app/src/main/java/com/main/android/activium/SettingsActivity.java)
+- Allows the user to configutre the app notififcations
+- Allows the user to signout from the app
 
 ### [Subscription Activity](app/src/main/java/com/main/android/activium/SubscriptionActivity.java)
+- Allows the user to purchase their subscriptoin and process payment through Google Play billing.
 
 ### [Intro Activity](app/src/main/java/com/main/android/activium/IntroActivity.java)
+- Walk the user through explanatory slides that highlights how the app works and how to use it.
 
 ### [Login Activity](app/src/main/java/com/main/android/activium/LoginActivity.java)
+- Allows the user to loging with their email address.
 
 ### [Sign up Activity](app/src/main/java/com/main/android/activium/SignupActivity.java)
+- Allows the user to signup with email, Google account or Facebook account.
 
 ### [Email confirmation Activity](app/src/main/java/com/main/android/activium/EmailConfirmActivity.java)
+- Confirms and verifies the user email upon signing up.
 
-### [Meals Record Activity](app/src/main/java/com/main/android/activium/MealsRecordActivity.java)
+### [Request Reset Password Activity](app/src/main/java/com/main/android/activium/reqPassResetActivity.java)
+- Allows the user to request reseting their password.
+- Send a password reset link to the user's registered account.
 
-### [Reset Password request Activity](app/src/main/java/com/main/android/activium/)
-
-### [Send Password Reset Email Activity](app/src/main/java/com/main/android/activium/)
+### [New Password Activity](app/src/main/java/com/main/android/activium/NewPassActivity.java)
+- Launches when the user clikcks on the link in the password reset email.
+- Allows the user to change their password.
 
 ### [Video Activity](app/src/main/java/com/main/android/activium/VideoActivity.java)
+-  Displays the viedo feed from the nutrtionist when the user enters their scheduled consultation session.
 
 ### [Video Settings Activity](app/src/main/java/com/main/android/activium/VideoSettingsActivity.java) - inactive
+- Allows the user to modify the video call settings
 
 ### [Diet Stats Activity](app/src/main/java/com/main/android/activium/DietStatsActivity.java) - inactive
+- Displays statistical information about the user logged meals and caloric intake.
+
+### [Meals Record Activity](app/src/main/java/com/main/android/activium/MealsRecordActivity.java) - inactive
+- Displays the meals logged and their macro nutrients contents informations
 
 ## Stack
-- [Back-end](https://github.com/h-amg/XHominid-website-and-backend): Built with Flask and hosted on GCP App engine
-- User authentication: Built with [MongoDB Stitch](https://www.mongodb.com/cloud/stitch) email, google and facebook user authentication and email verfication.
-- Data storage: Uses [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) cloud hosted Non-relational distributed databas.
-- Push notifications: Built with [Firebase Cloud messaging](https://firebase.google.com/products/cloud-messaging/) 
-- Auxiliary services: [Firebase Cloud storage](https://firebase.google.com/products/storage/) for media files storage, [Twilio Video](https://www.twilio.com/video) for video chat, [Twilio Chat](https://www.twilio.com/chat) for instant messaging, [Google play billing](https://developer.android.com/google/play/billing/billing_overview) for handling app subscription payment processing.
+
+#### [Back-end](https://github.com/h-amg/XHominid-website-and-backend)
+- Flask/Python
+- JavaScript
+- Twilio Video
+- Twilio Chat 
+- MongoDB stitch
+- MongoDB Atlas
+- Firebase Cloud Storage
+- Firebase Cloud Messaging
+- Google cloud - App engine
+
+#### User authentication
+- [MongoDB Stitch](https://www.mongodb.com/cloud/stitch) email, google and facebook user authentication and email verfication.
+
+#### Data storage
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) cloud hosted Non-relational distributed databas.
+
+#### Push notifications
+- [Firebase Cloud messaging](https://firebase.google.com/products/cloud-messaging/) 
+
+#### Auxiliary services
+- [Firebase Cloud storage](https://firebase.google.com/products/storage/) for media files storage.
+- [Twilio Video](https://www.twilio.com/video) for video chat.
+- [Twilio Chat](https://www.twilio.com/chat) for instant messaging.
+- [Google play billing](https://developer.android.com/google/play/billing/billing_overview) for handling app subscription payment processing.
 
 ## Screenshots
 <img src=".\screenshots\sc_1.png" width="150">  <img src=".\screenshots\sc_2.png" width="150"> <img src=".\screenshots\sc_3.png" width="150">  <img src=".\screenshots\sc_4.png" width="150" height="265">  <img src=".\screenshots\sc_5.png" width="150">  <img src=".\screenshots\sc_6.png" width="150">
-
-
-## Credits
