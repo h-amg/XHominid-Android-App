@@ -386,6 +386,7 @@ public class MealPlansActivity extends AppCompatActivity
                 setSelectedDateText(selectedDate);
             }
         });
+
         // Forward date button listener
         dateForwardBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -606,8 +607,8 @@ public class MealPlansActivity extends AppCompatActivity
                         .append("isPreped", true)
         );
 
-        RemoteUpdateOptions options = new RemoteUpdateOptions().upsert(true);
 
+        RemoteUpdateOptions options = new RemoteUpdateOptions().upsert(true);
         final Task<RemoteUpdateResult> updateTask = recomndsCollection.updateOne(filterDoc, updateDoc, options);
         updateTask.addOnCompleteListener(new OnCompleteListener<RemoteUpdateResult>() {
             @Override
@@ -754,6 +755,7 @@ public class MealPlansActivity extends AppCompatActivity
         }
         return output.toString();
     }
+
 
     @Override
     public void confirmEaten(RecomndRecipe recomndRecipe) {

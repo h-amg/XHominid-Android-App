@@ -17,7 +17,7 @@ XHomind is a platform that helps people looking for nutrition coaching and meal 
  - Fetches the user's current maco nutrients intake status from DB.
  - Displays the remian allowed calories for the day.
  - Check if there are available planned meals for the day and displays them.
- - Allows the user to view planned meals recipes and cooking instructions .
+ - Displays and allows the browsing of planned meals recipes and cooking instructions.
  - Enables the user to mark meals as eaten to be logged and substracted from remaining calories.
  - Notifies the user when they have no planned meals available for the week.
  - Enables the user to book a consultations session with their nutritionsist when no meals are planned.
@@ -26,11 +26,11 @@ XHomind is a platform that helps people looking for nutrition coaching and meal 
  - Verifies that the user is authenticated when the app is launched.
 
 ### [Meal Plans Activity](app/src/main/java/com/main/android/activium/MealPlansActivity.java)
-- Allows the user to browse the passed days logged meals.
-- Allows the user to browse the planned meals for upcoming days.
+- Displays and allows the browsing the previous days logged meals.
+- Displays and allows the browsing of planned meals for upcoming days.
 
 ### [Shopping list Activity](app/src/main/java/com/main/android/activium/ShoppingListActivity.java)
-- Allows the user to browe their weekly shopping list which is specified by their nutritionist each week.
+- Displays and allows the browsing of weekly shopping list specified by the nutritionist each week.
 
 ### [Messages Activity](app/src/main/java/com/main/android/activium/MessagesActivity.java)
 - Allows the user to message their nutritionists directly with their inquiries.
@@ -84,17 +84,6 @@ XHomind is a platform that helps people looking for nutrition coaching and meal 
 
 ## Stack
 
-#### [Back-end](https://github.com/h-amg/XHominid-website-and-backend)
-- Flask/Python
-- JavaScript
-- Twilio Video
-- Twilio Chat 
-- MongoDB stitch
-- MongoDB Atlas
-- Firebase Cloud Storage
-- Firebase Cloud Messaging
-- Google cloud - App engine
-
 #### User authentication
 - [MongoDB Stitch](https://www.mongodb.com/cloud/stitch) email, google and facebook user authentication and email verfication.
 
@@ -102,13 +91,24 @@ XHomind is a platform that helps people looking for nutrition coaching and meal 
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) cloud hosted Non-relational distributed databas.
 
 #### Push notifications
-- [Firebase Cloud messaging](https://firebase.google.com/products/cloud-messaging/) 
+- [Firebase Cloud Messaging](https://firebase.google.com/products/cloud-messaging/) cross platform push notifications.
 
 #### Auxiliary services
 - [Firebase Cloud storage](https://firebase.google.com/products/storage/) for media files storage.
 - [Twilio Video](https://www.twilio.com/video) for video chat.
 - [Twilio Chat](https://www.twilio.com/chat) for instant messaging.
 - [Google play billing](https://developer.android.com/google/play/billing/billing_overview) for handling app subscription payment processing.
+
+#### [Back-end](https://github.com/h-amg/XHominid-website-and-backend)
+- Flask/Python
+- JavaScript
+- [Twilio Video](https://www.twilio.com/video)
+- [Twilio Chat](https://www.twilio.com/chat)
+- [MongoDB Stitch](https://www.mongodb.com/cloud/stitch)
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+- [Firebase Cloud storage](https://firebase.google.com/products/storage/) 
+- [Firebase Cloud Messaging](https://firebase.google.com/products/cloud-messaging/)
+- [Google cloud App engine](https://cloud.google.com/appengine/)
 
 ## Screenshots
 <img src=".\screenshots\sc_1.png" width="150">  <img src=".\screenshots\sc_2.png" width="150"> <img src=".\screenshots\sc_3.png" width="150">  <img src=".\screenshots\sc_4.png" width="150" height="265">  <img src=".\screenshots\sc_5.png" width="150">  <img src=".\screenshots\sc_6.png" width="150">
