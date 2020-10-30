@@ -14,7 +14,7 @@ XHomind is a platform that helps people looking for nutrition coaching and meal 
 ## Components
 
 ### [Main Activity](app/src/main/java/com/main/android/activium/MainActivity.java)
- - Fetches the user's current maco nutrients intake status from DB.
+ - Fetches the user's current macro nutrients intake status from DB.
  - Displays the remian allowed calories for the day.
  - Check if there are available planned meals for the day and displays them.
  - Displays and allows the browsing of planned meals recipes and cooking instructions.
