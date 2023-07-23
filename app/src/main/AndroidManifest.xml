@@ -84,10 +84,12 @@
             android:name=".SubscriptionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Dark">
-        </activity> <!-- facebook -->
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
+            <!-- facebook -->
+            <!-- Ensure the correct permissions are set and the callback URLs match with the ones in the Facebook developer console -->
+            <meta-data
+                android:name="com.facebook.sdk.ApplicationId"
+                android:value="@string/facebook_app_id" />
+        </activity>
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
