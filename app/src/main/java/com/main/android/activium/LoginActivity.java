@@ -315,6 +315,11 @@ public class LoginActivity extends AppCompatActivity implements SignupActivity.s
     public void googleLogIn(final View ignored) {
         // show progress dialog
         progressDialog.show();
+        // Ensure GoogleSignInClient is correctly initialized
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+        googleSignInClient = GoogleSignIn.getClient(this, gso);
         Intent signInIntent = googleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
@@ -330,10 +335,15 @@ public class LoginActivity extends AppCompatActivity implements SignupActivity.s
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
-
+    
         if (requestCode == RC_SIGN_IN) {
+            // Ensure result is correctly handled
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            handleGooglSignInResult(task);
+            if (task.isSuccessful()) {
+                handleGooglSignInResult(task);
+            } else {
+                Log.e(TAG, "Error logging in with Google", task.getException());
+            }
             return;
         }
     }
@@ -390,17 +400,19 @@ public class LoginActivity extends AppCompatActivity implements SignupActivity.s
     public void facebooklogin(final View ignored) {
         // show progress dialog
         progressDialog.show();
+        // Ensure LoginManager is correctly initialized
         callbackManager = CallbackManager.Factory.create();
-        LoginManager.getInstance().registerCallback(callbackManager,
+        LoginManager loginManager = LoginManager.getInstance();
+        loginManager.registerCallback(callbackManager,
                 new FacebookCallback<LoginResult>() {
-                    @Override
-                    public void onSuccess(LoginResult loginResult) {
-                        final FacebookCredential fbCredential =
-                                new FacebookCredential(loginResult.getAccessToken().getToken());
-                        Stitch.getDefaultAppClient().getAuth().loginWithCredential(fbCredential)
-                                .addOnCompleteListener(new OnCompleteListener<StitchUser>() {
-                                    @Override
-                                    public void onComplete(@NonNull final Task<StitchUser> task) {
+                    ...
+                }
+        );
+        loginManager.logInWithReadPermissions(
+                LoginActivity.this,
+                Arrays.asList("public_profile")
+        );
+    }
                                         if (task.isSuccessful()) {
                                             // Do something here
                                             /*Log.d("Facebook login", "Successfully logged in as user "
@@ -512,4 +524,3 @@ public class LoginActivity extends AppCompatActivity implements SignupActivity.s
         }
     }
 }
-
